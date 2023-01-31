@@ -152,6 +152,15 @@ div.channlHeader {
   padding-top: 10px;
   box-shadow: 0 0 1px 0 black;
 }
+div.channlHeader a,
+div.channlHeader span {
+  color: #000;
+  text-decoration: none;
+}
+div.channlHeader a:hover,
+div.channlHeader span:hover {
+  text-decoration: underline;
+}
 div.css-1dbjc4n.r-1hwvwag.r-18kxxzh.r-1b7u577.r-1h8ys4a {
   display: none !important;
 }
