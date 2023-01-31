@@ -25,7 +25,7 @@ header {
 }
 
 main {
-  background-color: #fff;
+  background-color: #fff !important;
   color: black !important;
   padding: 10px;
   margin-left: 260px !important;
@@ -34,15 +34,20 @@ main {
   width: calc(100% - 260px) !important;
 }
 main * svg {
+  fill: black !important;
   color: black !important;
 }
 main > div {
   width: 100% !important;
 }
-main > div > div > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.r-1phboty.r-16y2uox.r-1jgb5lz.r-11wrixw.r-61z16t.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div.css-1dbjc4n.r-aqfbo4.r-gtdqiz.r-1gn8etr.r-1g40b8q > div.css-1dbjc4n.r-1e5uvyk.r-5zmot > div.css-1dbjc4n.r-1loqt21.r-136ojw6 {
+main * span {
+  color: black !important;
+}
+main * div.css-1dbjc4n.r-aqfbo4.r-gtdqiz.r-1gn8etr.r-1g40b8q > div.css-1dbjc4n.r-1e5uvyk.r-5zmot > div.css-1dbjc4n.r-1loqt21.r-136ojw6 {
   display: none !important;
 }
-main > div > div > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.r-1phboty.r-16y2uox.r-1jgb5lz.r-11wrixw.r-61z16t.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div.css-1dbjc4n.r-kemksi.r-184en5c > div {
+
+div .r-iphfwy {
   position: fixed;
   bottom: 0px;
   right: 0px;
@@ -53,6 +58,10 @@ main > div > div > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.
   background-color: white;
   border: gray 1px solid;
   border-radius: 5px;
+}
+div .r-iphfwy * span,
+div .r-iphfwy * div {
+  color: black !important;
 }
 
 main * div,
@@ -210,4 +219,8 @@ div[data-testid=ScrollSnap-SwipeableList] * span {
 #modal-header {
   background-color: #fff !important;
   color: black !important;
+}
+
+div[data-testid=tweetButtonInline] * span {
+  color: white !important;
 }/*# sourceMappingURL=content.css.map */
