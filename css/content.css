@@ -1,0 +1,181 @@
+.r-13qz1uu,
+.r-rthrr5 {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.r-5zmot {
+  background-color: #fff !important;
+}
+
+.r-l5o3uw {
+  background-color: #148567 !important;
+}
+
+header {
+  position: fixed !important;
+  left: 0px !important;
+  top: 0px !important;
+  bottom: 0px !important;
+  height: 100% !important;
+  width: 260px !important;
+  z-index: -5 !important;
+  background-color: #3f0e40 !important;
+  padding: 0px !important;
+}
+
+main {
+  background-color: #fff;
+  color: black !important;
+  padding: 10px;
+  margin-left: 260px !important;
+  border: 0px;
+  margin-top: 96px !important;
+  width: calc(100% - 260px) !important;
+}
+main * svg {
+  color: black !important;
+}
+main > div {
+  width: 100% !important;
+}
+main > div > div > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.r-1phboty.r-16y2uox.r-1jgb5lz.r-11wrixw.r-61z16t.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div.css-1dbjc4n.r-aqfbo4.r-gtdqiz.r-1gn8etr.r-1g40b8q > div.css-1dbjc4n.r-1e5uvyk.r-5zmot > div.css-1dbjc4n.r-1loqt21.r-136ojw6 {
+  display: none !important;
+}
+main > div > div > div > div.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1ljd8xs.r-13l2t4g.r-1phboty.r-16y2uox.r-1jgb5lz.r-11wrixw.r-61z16t.r-1ye8kvj.r-13qz1uu.r-184en5c > div > div.css-1dbjc4n.r-kemksi.r-184en5c > div {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: calc(-270px + 100%);
+  z-index: 4;
+  margin: 5px;
+  font-size: 18px;
+  background-color: white;
+  border: gray 1px solid;
+  border-radius: 5px;
+}
+
+main * div,
+main * span {
+  color: black !important;
+}
+
+div[data-testid=primaryColumn] > div {
+  border: 0px !important;
+  background-color: white;
+}
+div[data-testid=primaryColumn] > div > div {
+  background-color: #fff;
+}
+div[data-testid=primaryColumn] > div > div > div:nth-child(1) {
+  background-color: #fff !important;
+  -webkit-backdrop-filter: blur(0px) !important;
+          backdrop-filter: blur(0px) !important;
+}
+div[data-testid=primaryColumn] > div > div > div > div > div:nth-child(1) {
+  background-color: white !important;
+}
+div[data-testid=primaryColumn] * nav {
+  background-color: #fff !important;
+  height: 36px !important;
+  box-shadow: 0 0 1px 0 black !important;
+  background-color: #fff !important;
+  height: 36px !important;
+}
+
+div[data-testid=primaryColumn] * span,
+div[data-testid=primaryColumn] * div {
+  color: black !important;
+}
+
+div[data-testid=cellInnerDiv] > div,
+div[data-testid=tweet] {
+  border-width: 0px !important;
+  border: 0px !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+div[aria-live=polite] {
+  background-color: #fff;
+}
+
+.r-kemksi {
+  background-color: white !important;
+}
+
+div[data-testid=twc-cc-mask],
+div[data-testid=mask] {
+  margin-left: 260px;
+  margin-top: 44px;
+}
+
+div[data-testid=tweetText] > span,
+div[data-testid=tweetText] * span,
+div[data-testid=tweetText] * a {
+  color: black !important;
+  font-size: 15px !important;
+  line-height: 20px !important;
+}
+
+div[data-testid=primaryColumn] * nav * div[dir=ltr],
+div[data-testid=primaryColumn] * nav * a[role=tab] {
+  padding: 0px !important;
+  height: 36px !important;
+}
+
+div[data-testid=DMDrawer] {
+  display: none !important;
+}
+
+.r-1ssbvtb {
+  max-width: 300px !important;
+  width: 100% !important;
+  max-width: 300px !important;
+  display: block !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.r-sdzlij {
+  border-radius: 5px !important;
+}
+
+.public-DraftEditorPlaceholder-inner {
+  display: none !important;
+}
+
+article[data-testid=tweet] > div > div > div > div > div > div > div > span,
+article[data-testid=tweet] > div > div > div > div > div > div > div {
+  line-height: 20px !important;
+}
+
+div[aria-labelledby=modal-header] {
+  padding-top: 96px !important;
+  padding-left: 260px !important;
+}
+
+header * nav,
+a[data-testid=SideNav_NewTweet_Button] {
+  display: none !important;
+}
+
+div[data-testid=sidebarColumn] {
+  display: none !important;
+}
+
+div[data-testid=HoverCard] {
+  border: #350d36 solid 1px !important;
+  position: relative !important;
+}
+
+div[data-testid=HoverCard],
+div[data-testid=HoverCard] * span {
+  background-color: #fff !important;
+  color: black !important;
+  z-index: 20 !important;
+}
+
+.r-z32n2g {
+  background-color: #fff !important;
+}/*# sourceMappingURL=content.css.map */

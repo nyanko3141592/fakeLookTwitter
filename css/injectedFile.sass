@@ -1,0 +1,133 @@
+
+// for injected htmls
+// search bar
+.search-bar
+    z-index: 12
+    width: 100%
+    height: 44px
+    position: fixed
+    display: flex
+    top: 0px
+    left: 0px
+    background-color: #350d36
+    border-bottom: gray solid 1px !important
+    label
+        display: flex
+        margin-left: 260px
+        width: calc(100% - 260px - 130px)
+        height: 25px
+        margin-top: 10px
+        border: gray solid 1px
+        background-color: #644565
+        color: #fff
+        border-radius: 4px
+        & > div
+            width: 100%
+            & > input
+                width: calc(100% - 60px)
+                height: 95%
+                background-color: transparentize(#644565, 1)
+                color: #fff
+                border: none
+                outline: none
+                margin-bottom: 3px
+                &::placeholder
+                    color: #fff
+.buttonWrapper
+    padding-left: 10px
+    width: auto
+    cursor: pointer
+.searcbarButton
+    color: rgb(239, 243, 244)
+    height: 25px
+    height: 25px
+    margin-top: 10px
+    fill: rgb(239, 243, 244)
+.icon
+    color: #fff
+    width: 20px
+    fill: #fff
+    margin: 
+        top: 3px
+        left: 3px
+
+// sidebar
+.sidebar
+    z-index: 0
+    width: 255px !important
+    height: auto
+    top: 0px
+    position: fixed
+    color: #fff !important
+    background-color: #3f0e40
+    font-weight: 700
+    & > section
+        color: #bcaebc
+        padding-top: 10px
+        padding-left: 10px
+.sidebarWrapper
+    height: auto
+    margin-top: 44px
+.WorksSpace
+    padding-left: 10px
+    padding-top: 15px
+    width: auto
+    height: 50px
+    font-size: 20px
+    color: #fff
+    input
+        font-size: 20px
+        background-color: transparent
+        color: #fff
+        border: none
+        outline: none
+        font-weight: 700
+        &::placeholder
+            color: #fff
+.sideBorder
+    border-bottom: #653f66 solid 0.5px
+section
+    & > ol
+        margin-top: 0px
+        margin-bottom: 0px
+        padding-left: 0px
+section > ol > li,
+section > li
+    list-style: none
+    margin: 10px
+    cursor: pointer
+section > ol > li > a,
+section > ol > li > a:visited
+    text-decoration: none
+    color: inherit
+.cursorPointer
+    cursor: pointer
+div
+    &.channlHeader
+        background-color: white
+        position: fixed
+        top: 44px
+        left: calc(260px + 1px)
+        width: calc(100% - 260px)
+        height: 42px
+        z-index: 1
+        font-size: 25px
+        font-weight: 700
+        padding-left: 30px
+        padding-top: 10px
+        box-shadow: 0 0 1px 0 black
+    &.css-1dbjc4n.r-1hwvwag.r-18kxxzh.r-1b7u577.r-1h8ys4a
+        display: none !important
+button
+    position: absolute
+    right: 0px
+    background-color: #3f0e40
+    border: none
+    margin-left: auto
+    cursor: pointer
+    &.deleteButton
+        color: #3f0e40
+    &:hover
+        background-color: #6b6b6b
+        color: #3f0e40
+    
