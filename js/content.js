@@ -1,5 +1,6 @@
 var searchForm;
 var saveChannel;
+var isChannelShow = true;
 var workspaceTitle = "Slacker";
 const defaultChannel = [
   ["home", "/home"],
@@ -208,6 +209,8 @@ window.onload = function () {
     localStorage.setItem("workspaceTitle", workspaceTitle);
     workspaceTitleElement.placeholder = workspaceTitle;
   });
+  // set toggle
+  document.getElementById("channelToggle").addEventListener("click", switchChannels);
 };
 
 window.onhashchange = function () {
@@ -232,3 +235,16 @@ window.addEventListener(
 window.addEventListener("popstate", (e) => {
   setChannelTitle();
 });
+
+function switchChannels(){
+  // display none
+  isChannelShow = !isChannelShow;
+  if (isChannelShow) {
+    document.getElementById("channelList").style.display = "block";
+    document.getElementById("channelToggle").innerText = "▼ Channels";
+  }else{
+    document.getElementById("channelList").style.display = "none";
+    document.getElementById("channelToggle").innerText = "▶ Channels";
+  }
+  document.localStorage.setItem("isChannelShow", isChannelShow);
+}
