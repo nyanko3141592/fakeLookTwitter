@@ -173,7 +173,7 @@ function addchannel() {
 
 function setChannelTitle() {
   // チャンネルタイトルを表示
-  document.getElementById("channelTitle").innerText = makeChannelTitle(
+  document.getElementById("channelTitle").innerText = "# " + makeChannelTitle(
     window.location.href
   );
 }

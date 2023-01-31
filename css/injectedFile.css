@@ -159,7 +159,7 @@ div.channlHeader span {
 }
 div.channlHeader a:hover,
 div.channlHeader span:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 div.css-1dbjc4n.r-1hwvwag.r-18kxxzh.r-1b7u577.r-1h8ys4a {
   display: none !important;
