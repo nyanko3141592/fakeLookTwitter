@@ -178,4 +178,8 @@ div[data-testid=HoverCard] * span {
 
 .r-z32n2g {
   background-color: #fff !important;
+}
+
+div[data-testid=tweetTextarea_0] {
+  color: black !important;
 }/*# sourceMappingURL=content.css.map */
