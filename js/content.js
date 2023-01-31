@@ -257,5 +257,4 @@ function switchChannels(){
     document.getElementById("channelList").style.display = "none";
     document.getElementById("channelToggle").innerText = "▶ Channels";
   }
-  document.localStorage.setItem("isChannelShow", isChannelShow);
 }
