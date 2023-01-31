@@ -147,12 +147,16 @@ div[data-testid="DMDrawer"]
 .public-DraftEditorPlaceholder-inner
     display: none !important
 // ツイート詳細
-article[data-testid="tweet"] > div > div > div > div > div > div > div > span,
-article[data-testid="tweet"] > div > div > div > div > div > div > div
-    line-height: 20px !important
+article[data-testid="tweet"] 
+    * span,
+    * div
+        line-height: 20px !important
+        color: black !important
 div[aria-labelledby="modal-header"]
     padding-top: calc(44px + 52px) !important
     padding-left: 260px !important
+div[data-testid="User-Names"] * span
+    color: black !important
 // サイドバー要素　none
 header * nav,
 a[data-testid="SideNav_NewTweet_Button"]

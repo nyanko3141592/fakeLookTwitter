@@ -145,14 +145,19 @@ div[data-testid=DMDrawer] {
   display: none !important;
 }
 
-article[data-testid=tweet] > div > div > div > div > div > div > div > span,
-article[data-testid=tweet] > div > div > div > div > div > div > div {
+article[data-testid=tweet] * span,
+article[data-testid=tweet] * div {
   line-height: 20px !important;
+  color: black !important;
 }
 
 div[aria-labelledby=modal-header] {
   padding-top: 96px !important;
   padding-left: 260px !important;
+}
+
+div[data-testid=User-Names] * span {
+  color: black !important;
 }
 
 header * nav,
