@@ -18,7 +18,7 @@ download jquery-3.6.3.min.js from https://code.jquery.com/jquery-3.6.3.min.js
 
 # Installation
 
-## Load from GitHUb Repository
+## Load from GitHub Repository
 
 1. pull this repository
 2. download jquery-3.6.3.min.js from https://code.jquery.com/jquery-3.6.3.min.js
