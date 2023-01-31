@@ -60,7 +60,6 @@
     position: fixed
     color: #fff !important
     background-color: #3f0e40
-    font-weight: 700
     & > section
         color: #bcaebc
         padding-top: 10px
@@ -94,8 +93,12 @@ section
 section > ol > li,
 section > li
     list-style: none
-    margin: 10px
+    margin: 5px
     cursor: pointer
+    &:hover
+        font-weight: 700
+        & > a
+            text-decoration: none
 section > ol > li > a,
 section > ol > li > a:visited
     text-decoration: none
@@ -126,6 +129,7 @@ div
         display: none !important
 button
     position: absolute
+    height: 23px
     right: 0px
     background-color: #3f0e40
     border: none

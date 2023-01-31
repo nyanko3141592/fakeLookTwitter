@@ -72,7 +72,6 @@
   position: fixed;
   color: #fff !important;
   background-color: #3f0e40;
-  font-weight: 700;
 }
 .sidebar > section {
   color: #bcaebc;
@@ -124,8 +123,16 @@ section > ol {
 section > ol > li,
 section > li {
   list-style: none;
-  margin: 10px;
+  margin: 5px;
   cursor: pointer;
+}
+section > ol > li:hover,
+section > li:hover {
+  font-weight: 700;
+}
+section > ol > li:hover > a,
+section > li:hover > a {
+  text-decoration: none;
 }
 
 section > ol > li > a,
@@ -167,6 +174,7 @@ div.css-1dbjc4n.r-1hwvwag.r-18kxxzh.r-1b7u577.r-1h8ys4a {
 
 button {
   position: absolute;
+  height: 23px;
   right: 0px;
   background-color: #3f0e40;
   border: none;
