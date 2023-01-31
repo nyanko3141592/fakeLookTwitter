@@ -109,13 +109,16 @@ function addChannelUI(elementArray) {
   }
   if (elementArray[0] == "profile") {
     channelLink.id = "profile";
-    // add class
-    channelLink.className = "cursorPointer";
     channelLink.removeAttribute("href");
     channel.addEventListener("click", profileJump);
+  }else{
+    document.getElementById("channelList").appendChild(channel);
   }
   channel.appendChild(channelLink);
-  document.getElementById("channelList").appendChild(channel);
+  // li 全体にリンクを追加
+  channel.addEventListener("click", function () {
+    window.location.href = elementArray[1];
+  });
   // add delete button
   deleteButton.innerText = "×";
   deleteButton.className = "deleteButton";
