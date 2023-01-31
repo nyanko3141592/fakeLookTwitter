@@ -214,6 +214,14 @@ window.onload = function () {
   });
   // set toggle
   document.getElementById("channelToggle").addEventListener("click", switchChannels);
+  // get ol id funcList
+  var funcList = document.getElementById("funcList");
+  // set event listener each li
+  for (let i = 0; i < funcList.children.length; i++) {
+    funcList.children[i].addEventListener("click", function () {
+        window.location.href = funcList.children[i].children[0].href;
+    });
+  }
 };
 
 window.onhashchange = function () {
