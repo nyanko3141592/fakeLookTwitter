@@ -19,7 +19,7 @@ header
     padding: 0px !important
 // TL変更
 main
-    background-color: #fff
+    background-color: #fff !important
     color: black !important
     padding: 10px
     margin-left: 260px !important
@@ -28,58 +28,49 @@ main
     width: calc(100% - 260px) !important
     *
         svg
+            fill: black !important
             color: black !important
     & > div
         width: 100% !important
-        & > div
-            & > div
-                & > div
-                    &.css-1dbjc4n
-                        &.r-kemksi
-                            &.r-1kqtdi0
-                                &.r-1ljd8xs
-                                    &.r-13l2t4g
-                                        &.r-1phboty
-                                            &.r-16y2uox
-                                                &.r-1jgb5lz
-                                                    &.r-11wrixw
-                                                        &.r-61z16t
-                                                            &.r-1ye8kvj
-                                                                &.r-13qz1uu
-                                                                    &.r-184en5c
-                                                                        & > div
-                                                                            & > div
-                                                                                &.css-1dbjc4n
-                                                                                    &.r-aqfbo4
-                                                                                        &.r-gtdqiz
-                                                                                            &.r-1gn8etr
-                                                                                                &.r-1g40b8q
-                                                                                                    & > div
-                                                                                                        &.css-1dbjc4n
-                                                                                                            &.r-1e5uvyk
-                                                                                                                &.r-5zmot
-                                                                                                                    & > div
-                                                                                                                        &.css-1dbjc4n
-                                                                                                                            &.r-1loqt21
-                                                                                                                                &.r-136ojw6
-                                                                                                                                    display: none !important
-                                                                                    &.r-kemksi
-                                                                                        &.r-184en5c
-                                                                                            & > div
-                                                                                                position: fixed
-                                                                                                bottom: 0px
-                                                                                                right: 0px
-                                                                                                width: calc(-270px + 100%)
-                                                                                                z-index: 4
-                                                                                                margin: 5px
-                                                                                                font-size: 18px
-                                                                                                background-color: white
-                                                                                                border: gray 1px solid
-                                                                                                border-radius: 5px
+    * span
+        color: black !important
+    * div
+        &.css-1dbjc4n
+            &.r-aqfbo4
+                &.r-gtdqiz
+                    &.r-1gn8etr
+                        &.r-1g40b8q
+                            & > div
+                                &.css-1dbjc4n
+                                    &.r-1e5uvyk
+                                        &.r-5zmot
+                                            & > div
+                                                &.css-1dbjc4n
+                                                    &.r-1loqt21
+                                                        &.r-136ojw6
+                                                            display: none !important
+div
+    & .r-iphfwy
+        position: fixed
+        bottom: 0px
+        right: 0px
+        width: calc(-270px + 100%)
+        z-index: 4
+        margin: 5px
+        font-size: 18px
+        background-color: white
+        border: gray 1px solid
+        border-radius: 5px
+        *
+            span,
+            div
+                color: black !important
 // TL　文字色変更
 main * div,
 main * span
     color: black !important
+main * svg
+    fill: black !important
 
 div[data-testid="primaryColumn"]
     & > div
@@ -147,7 +138,7 @@ div[data-testid="DMDrawer"]
 .public-DraftEditorPlaceholder-inner
     display: none !important
 // ツイート詳細
-article[data-testid="tweet"] 
+article[data-testid="tweet"]
     * span,
     * div
         line-height: 20px !important
@@ -179,3 +170,22 @@ div[data-testid="HoverCard"] * span
 // ツイート
 div[data-testid="tweetTextarea_0"]
     color: black !important
+// delete confirm
+div[data-testid="confirmationSheetDialog"]
+    * spam,
+    * div
+        color: black !important
+// draft
+div[data-testid="app-bar-close"],
+div[data-testid="app-bar-back"]
+    * svg
+        fill: black !important
+div[data-testid="ScrollSnap-SwipeableList"]
+    * span
+        color: black !important
+#modal-header
+    background-color: #fff !important
+    color: black !important
+div[data-testid="tweetButtonInline"]
+    * span
+        color: white !important

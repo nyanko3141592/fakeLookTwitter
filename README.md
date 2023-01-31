@@ -18,6 +18,10 @@ download jquery-3.6.3.min.js from https://code.jquery.com/jquery-3.6.3.min.js
 
 # Installation
 
+This is designed for dark mode.
+You should choose dark mode in your twitter setting.
+![Twitter Display Setting](asset\twitterDisplaySetting.jpg)
+
 ## Load from GitHub Repository
 
 1. pull this repository
