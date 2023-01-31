@@ -60,6 +60,10 @@ main * span {
   color: black !important;
 }
 
+main * svg {
+  fill: black !important;
+}
+
 div[data-testid=primaryColumn] > div {
   border: 0px !important;
   background-color: white;
@@ -186,5 +190,24 @@ div[data-testid=HoverCard] * span {
 }
 
 div[data-testid=tweetTextarea_0] {
+  color: black !important;
+}
+
+div[data-testid=confirmationSheetDialog] * spam,
+div[data-testid=confirmationSheetDialog] * div {
+  color: black !important;
+}
+
+div[data-testid=app-bar-close] * svg,
+div[data-testid=app-bar-back] * svg {
+  fill: black !important;
+}
+
+div[data-testid=ScrollSnap-SwipeableList] * span {
+  color: black !important;
+}
+
+#modal-header {
+  background-color: #fff !important;
   color: black !important;
 }/*# sourceMappingURL=content.css.map */

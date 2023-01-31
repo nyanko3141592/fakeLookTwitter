@@ -80,6 +80,8 @@ main
 main * div,
 main * span
     color: black !important
+main * svg
+    fill: black !important
 
 div[data-testid="primaryColumn"]
     & > div
@@ -178,4 +180,20 @@ div[data-testid="HoverCard"] * span
     background-color: #fff !important
 // ツイート
 div[data-testid="tweetTextarea_0"]
+    color: black !important
+// delete confirm
+div[data-testid="confirmationSheetDialog"]
+    * spam,
+    * div
+        color: black !important
+// draft
+div[data-testid="app-bar-close"],
+div[data-testid="app-bar-back"]
+    * svg
+        fill: black !important
+div[data-testid="ScrollSnap-SwipeableList"]
+    * span
+        color: black !important
+#modal-header
+    background-color: #fff !important
     color: black !important
