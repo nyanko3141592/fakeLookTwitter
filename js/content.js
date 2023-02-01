@@ -2,6 +2,7 @@ var searchForm;
 var saveChannel;
 var isChannelShow = true;
 var workspaceTitle = "Slacker";
+const channelTitleMaxLength = 19;
 const defaultChannel = [
   ["home", "/home"],
   ["notification", "/notifications"],
@@ -41,16 +42,6 @@ function addHtmlToBody(htmlPath) {
   div.innerHTML = htmlText;
   body.appendChild(div);
   return div;
-}
-
-function profileJump() {
-  try {
-    document
-      .querySelectorAll('[data-testid="AppTabBar_Profile_Link"]')[0]
-      .click();
-  } catch (e) {
-    console.log(e);
-  }
 }
 
 function twitterSearch(e) {
@@ -95,30 +86,36 @@ function makeChannelTitle(url) {
 
 // add channel
 function addChannelUI(elementArray) {
+  console.log(elementArray);
   var channel = document.createElement("li");
   var channelLink = document.createElement("a");
-  // delete button
   var deleteButton = document.createElement("button");
   channelLink.href = elementArray[1];
-  const channelTitleMaxLength = 19;
+  // set channel name
   if (elementArray[0].length > channelTitleMaxLength) {
     channelLink.innerText =
       "# " + elementArray[0].slice(0, channelTitleMaxLength) + "...";
   } else {
     channelLink.innerText = "# " + elementArray[0];
   }
+  // set event lister
+  document.getElementById("channelList").appendChild(channel);
   if (elementArray[0] == "profile") {
+    console.log("profile")
     channelLink.id = "profile";
-    channelLink.removeAttribute("href");
-    channel.addEventListener("click", profileJump);
-  }else{
+    channel.addEventListener("click", function () {
+      document
+      .querySelectorAll('[data-testid="AppTabBar_Profile_Link"]')[0]
+      .click();
+    });
+  } else {
     document.getElementById("channelList").appendChild(channel);
+    // li 全体にリンクを追加
+    channel.addEventListener("click", function () {
+      window.location.href = elementArray[1];
+    });
   }
   channel.appendChild(channelLink);
-  // li 全体にリンクを追加
-  channel.addEventListener("click", function () {
-    window.location.href = elementArray[1];
-  });
   // add delete button
   deleteButton.innerText = "×";
   deleteButton.className = "deleteButton";
@@ -177,9 +174,8 @@ function addchannel() {
 
 function setChannelTitle() {
   // チャンネルタイトルを表示
-  document.getElementById("channelTitle").innerText = "# " + makeChannelTitle(
-    window.location.href
-  );
+  document.getElementById("channelTitle").innerText =
+    "# " + makeChannelTitle(window.location.href);
 }
 
 window.onload = function () {
@@ -213,13 +209,15 @@ window.onload = function () {
     workspaceTitleElement.placeholder = workspaceTitle;
   });
   // set toggle
-  document.getElementById("channelToggle").addEventListener("click", switchChannels);
+  document
+    .getElementById("channelToggle")
+    .addEventListener("click", switchChannels);
   // get ol id funcList
   var funcList = document.getElementById("funcList");
   // set event listener each li
   for (let i = 0; i < funcList.children.length; i++) {
     funcList.children[i].addEventListener("click", function () {
-        window.location.href = funcList.children[i].children[0].href;
+      window.location.href = funcList.children[i].children[0].href;
     });
   }
 };
@@ -247,13 +245,13 @@ window.addEventListener("popstate", (e) => {
   setChannelTitle();
 });
 
-function switchChannels(){
+function switchChannels() {
   // display none
   isChannelShow = !isChannelShow;
   if (isChannelShow) {
     document.getElementById("channelList").style.display = "block";
     document.getElementById("channelToggle").innerText = "▼ Channels";
-  }else{
+  } else {
     document.getElementById("channelList").style.display = "none";
     document.getElementById("channelToggle").innerText = "▶ Channels";
   }
