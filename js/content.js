@@ -103,6 +103,8 @@ function addChannelUI(elementArray) {
   if (elementArray[0] == "profile") {
     console.log("profile")
     channelLink.id = "profile";
+    // delete href
+    channelLink.href = "";
     channel.addEventListener("click", function () {
       document
       .querySelectorAll('[data-testid="AppTabBar_Profile_Link"]')[0]
