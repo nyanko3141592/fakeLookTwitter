@@ -220,6 +220,12 @@ window.onload = function () {
       window.location.href = funcList.children[i].children[0].href;
     });
   }
+  // check url is search
+  if (window.location.href.indexOf("search?q=") != -1) {
+    document.getElementById("searchInputForm").value = decodeUrlEncodedString(
+      window.location.href.split("search?q=")[1]
+    );
+  }
 };
 
 window.onhashchange = function () {
