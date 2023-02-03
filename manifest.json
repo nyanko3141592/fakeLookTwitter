@@ -1,7 +1,7 @@
 {
   "name": "FakeLookTwitterChromeExtension",
   "version": "1.1.1",
-  "description": "Not Twitte Like Look Twitter Design Custom",
+  "description": "Make your Twitter look like Slack",
   "manifest_version": 3,
   "icons": {
     "16": "asset/logo16.png",
