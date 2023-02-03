@@ -2,6 +2,7 @@ var searchForm;
 var saveChannel;
 var isChannelShow = true;
 var workspaceTitle = "Slacker";
+var isEnable = true;
 const channelTitleMaxLength = 19;
 const defaultChannel = [
   ["home", "/home"],
@@ -17,6 +18,10 @@ if (localStorage.getItem("saveChannel") != null) {
 if (localStorage.getItem("workspaceTitle") != null) {
   workspaceTitle = localStorage.getItem("workspaceTitle");
 }
+
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  console.log("changes", changes);
+});
 
 function isDefaultChannelURL(checkURL) {
   defaultChannel.forEach((element) => {
@@ -101,12 +106,12 @@ function addChannelUI(elementArray) {
   // set event lister
   document.getElementById("channelList").appendChild(channel);
   if (elementArray[0] == "profile") {
-    console.log("profile")
+    console.log("profile");
     channelLink.id = "profile";
     channel.addEventListener("click", function () {
       document
-      .querySelectorAll('[data-testid="AppTabBar_Profile_Link"]')[0]
-      .click();
+        .querySelectorAll('[data-testid="AppTabBar_Profile_Link"]')[0]
+        .click();
     });
   } else {
     document.getElementById("channelList").appendChild(channel);
@@ -178,7 +183,17 @@ function setChannelTitle() {
     "# " + makeChannelTitle(window.location.href);
 }
 
+chrome.storage.local.get(["isRun"], (result) => {
+  isEnable = result.isRun;
+});
+
 window.onload = function () {
+  console.log("isEnable: " + isEnable);
+  if (!isEnable) {
+    return;
+  }
+  addCss("css/content.css");
+  addCss("css/injectedFile.css");
   addHtmlToBody("html/sidebar.html").style.height =
     window.innerHeight - 44 + "px";
   addHtmlToBody("html/searchBar.html");
@@ -261,4 +276,13 @@ function switchChannels() {
     document.getElementById("channelList").style.display = "none";
     document.getElementById("channelToggle").innerText = "▶ Channels";
   }
+}
+
+function addCss(cssPath) {
+  let path = chrome.runtime.getURL(cssPath);
+  let link = document.createElement("link");
+  link.href = path;
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  document.head.appendChild(link);
 }
