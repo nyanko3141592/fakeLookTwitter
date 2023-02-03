@@ -13,14 +13,18 @@
       "matches": ["https://twitter.com/*"],
       "js": ["js/jquery-3.6.3.min.js", "js/content.js"],
       "exclude_matches": ["https://twitter.com/messages"],
-      "css": ["css/content.css", "css/injectedFile.css"],
       "run_at": "document_end"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["html/*.html"],
+      "resources": ["html/*.html", "css/*.css", "asset/*.png", "asset/*.jpg"],
       "matches": ["https://twitter.com/*"]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage"],
+  "action": {}
 }
