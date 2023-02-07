@@ -115,11 +115,13 @@ function addChannelUI(elementArray) {
     });
   } else {
     document.getElementById("channelList").appendChild(channel);
+    channelLink.id = elementArray[0];
     // li 全体にリンクを追加
     channel.addEventListener("click", function () {
       window.location.href = elementArray[1];
     });
   }
+  unreadChannelBold();
   channel.appendChild(channelLink);
   // add delete button
   deleteButton.innerText = "×";
@@ -214,6 +216,8 @@ window.onload = function () {
   addchannelButton.addEventListener("click", addchannel);
   // チャンネルタイトルを表示
   setChannelTitle();
+  // 通知
+  unreadChannelBold();
   // workspace title
   workspaceTitleElement = document.getElementById("workspaceTitle");
   workspaceTitleElement.value = workspaceTitle;
@@ -257,13 +261,18 @@ function decodeUrlEncodedString(str) {
 window.addEventListener(
   "click",
   function () {
+    if (!isEnable) {
+      return;
+    }
     setChannelTitle();
+    unreadChannelBold();
   },
   false
 );
 
 window.addEventListener("popstate", (e) => {
   setChannelTitle();
+  unreadChannelBold();
 });
 
 function switchChannels() {
@@ -285,4 +294,24 @@ function addCss(cssPath) {
   link.rel = "stylesheet";
   link.type = "text/css";
   document.head.appendChild(link);
+}
+
+function unreadChannelBold() {
+  // set notification show
+  const noti = document
+  .querySelector('a[data-testid="AppTabBar_Notifications_Link"]');
+  if (noti == null) {
+    // notificationの有無をチェック
+    if (localStorage.getItem("noficationFlag") == "true") {
+      document.getElementById("notification").style.fontWeight = "700";
+    }
+    return;
+  }
+  const ariaLabel = noti.getAttribute("aria-label"); 
+  // 未読か確認
+  if (ariaLabel.indexOf("未") != -1 || ariaLabel.indexOf("unread") != -1) {
+    document.getElementById("notification").style.fontWeight = "700";
+  } else {
+    document.getElementById("notification").style.fontWeight = "400";
+  }
 }
