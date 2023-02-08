@@ -298,8 +298,9 @@ function addCss(cssPath) {
 
 function unreadChannelBold() {
   // set notification show
-  const noti = document
-  .querySelector('a[data-testid="AppTabBar_Notifications_Link"]');
+  const noti = document.querySelector(
+    'a[data-testid="AppTabBar_Notifications_Link"]'
+  );
   if (noti == null) {
     // notificationの有無をチェック
     if (localStorage.getItem("noficationFlag") == "true") {
@@ -307,11 +308,15 @@ function unreadChannelBold() {
     }
     return;
   }
-  const ariaLabel = noti.getAttribute("aria-label"); 
-  // 未読か確認
-  if (ariaLabel.indexOf("未") != -1 || ariaLabel.indexOf("unread") != -1) {
-    document.getElementById("notification").style.fontWeight = "700";
-  } else {
-    document.getElementById("notification").style.fontWeight = "400";
+  const ariaLabel = noti.getAttribute("aria-label");
+  try {
+    // 未読か確認
+    if (ariaLabel.indexOf("未") != -1 || ariaLabel.indexOf("unread") != -1) {
+      document.getElementById("notification").style.fontWeight = "700";
+    } else {
+      document.getElementById("notification").style.fontWeight = "400";
+    }
+  } catch (e) {
+    console.log(e);
   }
 }
