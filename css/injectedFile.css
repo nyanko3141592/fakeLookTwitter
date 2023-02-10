@@ -35,9 +35,6 @@
 .search-bar label > div > input::-moz-placeholder {
   color: #fff;
 }
-.search-bar label > div > input:-ms-input-placeholder {
-  color: #fff;
-}
 .search-bar label > div > input::placeholder {
   color: #fff;
 }
@@ -62,6 +59,16 @@
   fill: #fff;
   margin-top: 3px;
   margin-left: 3px;
+}
+.icon.search-launcher {
+  width: 20px;
+  height: 20px;
+  top: 7px;
+  right: 5px;
+  fill: #fff;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
 }
 
 .sidebar {
@@ -101,9 +108,6 @@
   font-weight: 700;
 }
 .WorksSpace input::-moz-placeholder {
-  color: #fff;
-}
-.WorksSpace input:-ms-input-placeholder {
   color: #fff;
 }
 .WorksSpace input::placeholder {
